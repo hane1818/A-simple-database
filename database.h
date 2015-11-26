@@ -12,9 +12,9 @@ public:
     void Show() const { std::cout << (*this); }
     void Drop() { num_record_=0; }
     void Insert(const Student & s);
-    bool Import(const std::string filename);
-    const Database Select(const std::string name) const;
-    void Export(const std::string filename) const;
+    bool Import(std::string filename);
+    const Database Select(std::string name) const;
+    void Export(std::string filename) const;
 private:
     static constexpr int MAX_RECORD_=100;
     Student record_[MAX_RECORD_];

@@ -9,7 +9,7 @@ void Database::Insert(const Student & s)
     std::sort(record_, record_+num_record_);
 }
 
-const Database Database::Select(const std::string name) const
+const Database Database::Select(std::string name) const
 {
     Database tmp;
     for(int i=0;i<num_record_;++i)
@@ -23,7 +23,7 @@ const Database Database::Select(const std::string name) const
     return tmp;
 }
 
-void Database::Export(const std::string filename) const
+void Database::Export(std::string filename) const
 {
     std::ofstream fout(filename);
     if(fout)
@@ -33,7 +33,7 @@ void Database::Export(const std::string filename) const
     fout.close();
 }
 
-bool Database::Import(const std::string filename)
+bool Database::Import(std::string filename)
 {
     std::ifstream fin(filename);
     if(fin)
