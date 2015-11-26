@@ -13,7 +13,6 @@ public:
     bool isFull() const { return (num_record_==MAX_RECORD_); }
     int size() const { return num_record_; }
     void Show() const { std::cout << (*this); }
-    void Drop() { num_record_=0; }
     bool Insert(const Student & s);
     bool Import(std::string filename);
     const Database Select(std::string name) const;
@@ -22,6 +21,7 @@ private:
     static constexpr int MAX_RECORD_=100;
     Student record_[MAX_RECORD_];
     int num_record_=0;
+    void Reset_() { num_record_=0; }
 };
 
 std::ostream & operator << (std::ostream & os, const Database & db);

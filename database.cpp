@@ -37,7 +37,7 @@ bool Database::Import(std::string filename)
     std::ifstream fin(filename);
     if(fin)
     {
-        Drop();
+        Reset_();
         while(!fin.eof())
         {
             Student s;
