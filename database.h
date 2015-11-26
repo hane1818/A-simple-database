@@ -14,7 +14,7 @@ public:
     int size() const { return num_record_; }
     void Show() const { std::cout << (*this); }
     void Drop() { num_record_=0; }
-    void Insert(const Student & s);
+    bool Insert(const Student & s);
     bool Import(std::string filename);
     const Database Select(std::string name) const;
     void Export(std::string filename) const;

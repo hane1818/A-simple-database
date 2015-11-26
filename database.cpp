@@ -2,8 +2,10 @@
 
 bool Database::Insert(const Student & s)
 {
+    if(isFull()) return false;
     record_[num_record_++]=s;
     std::sort(record_, record_+num_record_);
+    return true;
 }
 
 const Database Database::Select(std::string name) const
