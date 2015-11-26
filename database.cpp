@@ -50,9 +50,7 @@ bool Database::Import(const std::string filename)
             char gender='\0';
             int age=0;
             int scores[Student::MAX_SCORES]={0};
-            fin >> name;
-            fin >> gender;
-            fin >> age;
+            fin >> name >> gender >> age;
             for(int i=0;i<Student::MAX_SCORES;++i)
             {
                 fin >> scores[i];
