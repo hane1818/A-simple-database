@@ -20,6 +20,7 @@ int main()
         cout << "Please select a function...>";
         int opt=0;
         cin >> opt;
+        cin.get();
         system("cls");
         switch(opt)
         {
@@ -44,6 +45,7 @@ int main()
                     Student s(name, gender, age, scores);
                     db.Insert(s);
                     cout << endl << "Successfully add a record!" << endl << endl;
+                    cin.get();
                 }
                 else
                     cout << "Database is full." << endl;
@@ -60,6 +62,7 @@ int main()
                 string name;
                 cout << "Please input the name of the student...>";
                 cin >> name;
+                cin.get();
                 cout << endl;
                 cout << "If the length of name is too long, it may ignore part sequence to fit the name field when searching.";
                 Database result = db.Select(name);
@@ -73,6 +76,7 @@ int main()
                 cout << "Note that the original data in the file will be lost after writing to the file. Are you sure that you want to continue? (Y/N)...>";
                 char ch;
                 cin >> ch;
+                cin.get();
                 if(ch=='Y'||ch=='y')
                 {
                     cout << "Please input the name of the file...>";
@@ -91,6 +95,7 @@ int main()
                 cout << "Note that current data in the program will be lost after reading. Are you sure that you want to continue? (Y/N)...>";
                 char ch;
                 cin >> ch;
+                cin.get();
                 if(ch=='Y'||ch=='y')
                 {
                     cout << "Please input the name of the file...>";
@@ -114,7 +119,8 @@ int main()
             cout << "Invalid choice." << endl;
             break;
         }
-        system("pause");
+        cout << endl << "Press ENTER to continue.";
+        cin.get();
         system("cls");
     }
 
