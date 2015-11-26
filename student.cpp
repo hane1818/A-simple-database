@@ -21,6 +21,11 @@ bool Student::isSameName(std::string name) const
     return name==name_;
 }
 
+bool Student::operator == (std::string rhs) const
+{
+    return isSameName(rhs);
+}
+
 bool Student::operator < (const Student & rhs) const
 {
     return name_ < rhs.name_;

@@ -13,7 +13,7 @@ const Database Database::Select(std::string name) const
     Database tmp;
     for(int i=0;i<num_record_;++i)
     {
-        if(record_[i].isSameName(name))
+        if(record_[i] == name)
         {
             tmp.Insert(record_[i]);
         }
