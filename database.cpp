@@ -1,6 +1,6 @@
 #include "database.h"
 
-void Database::Insert(const Student & s)
+bool Database::Insert(const Student & s)
 {
     record_[num_record_++]=s;
     std::sort(record_, record_+num_record_);
@@ -47,9 +47,11 @@ bool Database::Import(std::string filename)
             {
                 fin >> scores[i];
             }
-            if(fin.eof()) break;
-            Student s(name,gender,age,scores);
-            Insert(s);
+            if(!(fin.eof()||isFull()))
+            {
+                Student s(name,gender,age,scores);
+                Insert(s);
+            }
         }
         fin.close();
         return true;
