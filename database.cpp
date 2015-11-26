@@ -23,11 +23,6 @@ const Database Database::Select(const std::string name) const
     return tmp;
 }
 
-void Database::Show() const
-{
-    std::cout << (*this);
-}
-
 void Database::Export(const std::string filename) const
 {
     std::ofstream fout(filename);
