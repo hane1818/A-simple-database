@@ -1,6 +1,4 @@
 #include "student.h"
-#include <iostream>
-#include <fstream>
 
 Student::Student(std::string name, char gender, int age, const int* scores)
 {

@@ -1,7 +1,4 @@
 #include "database.h"
-#include <iostream>
-#include <fstream>
-#include <algorithm>
 
 void Database::Insert(const Student & s)
 {

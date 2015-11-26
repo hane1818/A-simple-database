@@ -1,6 +1,9 @@
 #ifndef DATABASE__
 #define DATABASE__
 #include "student.h"
+#include <iostream>
+#include <fstream>
+#include <algorithm>
 
 class Database
 {

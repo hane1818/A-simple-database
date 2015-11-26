@@ -1,8 +1,8 @@
 #ifndef STUDENT__
 #define STUDENT__
-#include <string>
 #include <iostream>
 #include <fstream>
+#include <string>
 
 class Student
 {
