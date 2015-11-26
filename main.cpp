@@ -60,7 +60,6 @@ int main()
                 string name;
                 cout << "Please input the name of the student...>";
                 cin >> name;
-                cin.get();
                 cout << endl;
                 cout << "If the length of name is too long, it may ignore part sequence to fit the name field when searching.";
                 Database result = db.Select(name);
