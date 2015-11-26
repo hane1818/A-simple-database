@@ -43,3 +43,11 @@ std::ostream & operator << (std::ostream & os, const Student & s)
     return os;
 }
 
+std::istream & operator >> (std::istream & is, Student & s)
+{
+    is >> s.name_ >> s.gender_ >> s.age_;
+    for(int i=0;i<s.MAX_SCORES;++i)
+        is >> s.scores_[i];
+
+    return is;
+}

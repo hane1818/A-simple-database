@@ -61,7 +61,7 @@ int main()
                 cout << "Please input the name of the student...>";
                 cin >> name;
                 cout << endl;
-                cout << "If the length of name is too long, it may ignore part sequence to fit the name field when searching.";
+                cout << "If the length of name is too long, it may ignore part sequence to fit the name field when searching." << endl << endl;
                 Database result = db.Select(name);
                 cout << "There is/are " << result.size() << " \"" << name << "\":" << endl << endl;
                 cout << result << endl;

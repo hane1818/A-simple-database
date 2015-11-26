@@ -7,6 +7,7 @@
 class Student
 {
 friend std::ostream & operator << (std::ostream & os, const Student & s);
+friend std::istream & operator >> (std::istream & is, Student & s);
 public:
     static constexpr int MAX_SCORES=3;
     Student() = default;
@@ -24,5 +25,6 @@ private:
 };
 
 std::ostream & operator << (std::ostream & os, const Student & s);
+std::istream & operator >> (std::istream & is, Student & s);
 
 #endif // STUDENT__
