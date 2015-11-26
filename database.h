@@ -21,7 +21,7 @@ public:
 private:
     static constexpr int MAX_RECORD_=100;
     Student record_[MAX_RECORD_];
-    int num_record_=1;
+    int num_record_=0;
 };
 
 std::ostream & operator << (std::ostream & os, const Database & db);
