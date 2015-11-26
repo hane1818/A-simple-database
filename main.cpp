@@ -71,7 +71,7 @@ int main()
             {
                 cout << "Out all records to a text file." << endl << endl;
                 cout << "Note that the original data in the file will be lost after writing to the file. Are you sure that you want to continue? (Y/N)...>";
-                char ch;
+                char ch='N';
                 cin >> ch;
                 if(ch=='Y'||ch=='y')
                 {
@@ -89,7 +89,7 @@ int main()
             {
                 cout << "Read in records from a text file." << endl << endl;
                 cout << "Note that current data in the program will be lost after reading. Are you sure that you want to continue? (Y/N)...>";
-                char ch;
+                char ch='N';
                 cin >> ch;
                 if(ch=='Y'||ch=='y')
                 {
