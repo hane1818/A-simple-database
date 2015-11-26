@@ -9,7 +9,7 @@ class Student
 friend std::ostream & operator << (std::ostream & os, const Student & s);
 public:
     static constexpr int MAX_SCORES=3;
-    Student(){ }
+    Student() = default;
     Student(std::string name, char gender, int age, const int* scores);
     bool isSameName(std::string name) const;
     bool operator < (const Student & rhs) const;
