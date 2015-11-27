@@ -3,8 +3,7 @@
 bool Database::Insert(const Student & s)
 {
     if(isFull()) return false;
-    record_[num_record_++]=s;
-    std::sort(record_, record_+num_record_);
+    (*this) << s;
     return true;
 }
 
@@ -43,13 +42,23 @@ bool Database::Import(std::string filename)
             Student s;
             fin >> s;
             if(!(fin.eof()||isFull()))
-                Insert(s);
+                (*this) << s;
         }
         fin.close();
         return true;
     }
     else return false;
 
+}
+
+Database & Database::operator << (const Student & s)
+{
+    if(!isFull())
+    {
+        record_[num_record_++]=s;
+        std::sort(record_, record_+num_record_);
+    }
+    return (*this);
 }
 
 std::ostream & operator << (std::ostream & os, const Database & db)

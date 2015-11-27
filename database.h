@@ -17,6 +17,7 @@ public:
     bool Import(std::string filename);
     const Database Select(std::string name) const;
     void Export(std::string filename) const;
+    Database & operator << (const Student & s);
 private:
     static constexpr int MAX_RECORD_=100;
     Student record_[MAX_RECORD_];
