@@ -11,7 +11,7 @@ friend std::ostream & operator << (std::ostream & os, const Database & db);
 
 public:
     bool isFull() const { return (num_record_==MAX_RECORD_); }
-    int size() const { return num_record_; }
+    size_t size() const { return num_record_; }
     void Show() const { std::cout << (*this); }
     bool Insert(const Student & s);
     bool Import(std::string filename);
@@ -19,9 +19,9 @@ public:
     void Export(std::string filename) const;
     Database & operator << (const Student & s);
 private:
-    static constexpr int MAX_RECORD_=100;
+    static constexpr std::size_t MAX_RECORD_=100;
     Student record_[MAX_RECORD_];
-    int num_record_=0;
+    std::size_t num_record_=0;
     void Reset_() { num_record_=0; }
 };
 
