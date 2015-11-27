@@ -9,16 +9,16 @@ bool Database::Insert(const Student & s)
 
 const Database Database::Select(std::string name) const
 {
-    Database tmp;
+    Database result;
     for(int i=0;i<num_record_;++i)
     {
         if(record_[i] == name)
         {
-            tmp.Insert(record_[i]);
+            result << record_[i];
         }
     }
 
-    return tmp;
+    return result;
 }
 
 void Database::Export(std::string filename) const
